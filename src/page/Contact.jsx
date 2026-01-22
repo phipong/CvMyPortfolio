@@ -54,7 +54,7 @@ export default function Contact() {
     <motion.div
       initial="hidden"
       animate="show"
-      className="w-full px-4 h-[800px] lg:h-[550px] mt-24"
+      className="w-full px-4 h-[940px] lg:h-[550px] mt-24"
     >
       <div className="flex flex-col lg:flex-row items-center gap-6 max-w-7xl mx-auto">
         {/* Contact Form */}
@@ -147,10 +147,13 @@ export default function Contact() {
             </p>
           </div>
           </div>
-            <div className="bg-violet-700 p-3 h-[123px] rounded-b-xl text-center pt-6">
-            <p className="text-lg font-serif">I'm interested in freelance opportunities and collaborations.
-              I’m also open to exploring new partnerships that bring creativity and shared growth.</p>
-            </div>
+           <div className="bg-violet-700 rounded-b-xl text-center px-4 py-6 sm:px-6 sm:py-8 lg:px-10 lg:py-6 lg:h-[135px]">
+  <p className="font-serif text-base sm:text-lg lg:text-lg leading-relaxed text-white">
+    I'm interested in freelance opportunities and collaborations.
+    I’m also open to exploring new partnerships that bring creativity and shared growth.
+  </p>
+</div>
+
         </motion.div>
       </div>
     </motion.div>

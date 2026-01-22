@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FaTelegram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom";
 export default function Home() {
    const container = {
       hidden: {},
@@ -41,11 +42,15 @@ export default function Home() {
           <motion.span variants={item} className="text-gray-600 block max-w-md mx-auto lg:mx-0">
             I'm always ready to learn and grow in the field of web development.
           </motion.span>
-        <div className="link text-4xl flex justify-center lg:justify-center gap-6 mt-6">
+        <div className="link text-4xl flex justify-center items-center lg:justify-center gap-6 mt-6">
           <motion.a variants={item} whileHover={{ scale: 1.2 }} transition={{ type: "spring", stiffness: 300, damping: 15 }} className="hover:text-violet-600" href="https://github.com/phipong"><FaGithub /></motion.a>
           <motion.a variants={item} whileHover={{ scale: 1.2 }} transition={{ type: "spring", stiffness: 300, damping: 15 }} className="hover:text-violet-600" href="https://www.facebook.com/phipong9999"><FaFacebook /></motion.a>
           <motion.a variants={item} whileHover={{ scale: 1.2 }} transition={{ type: "spring", stiffness: 300, damping: 15 }} className="hover:text-violet-600" href="https://t.me/Phipong"><FaTelegram /></motion.a>
+          <Link to={'/contact'} className="text-lg bg-violet-600 px-4 py-3 rounded-full hover:scale-110 duration-300 hover:bg-violet-200 hover:text-blue-400">
+          Contact me
+          </Link>
         </div>
+      
         </div>
 
         {/* RIGHT Image */}
