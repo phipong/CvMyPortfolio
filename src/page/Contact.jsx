@@ -123,8 +123,9 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
-          className="w-full lg:w-1/2 lg:h-[400px] bg-violet-400 p-6 rounded-xl text-white"
+          className="w-full lg:w-1/2 lg:h-[400px] bg-violet-400 rounded-xl text-white"
         >
+          <div className="p-8">
           <h2 className="text-3xl text-violet-900 lg:text-4xl font-semibold">
             Quick Contact
           </h2>
@@ -145,6 +146,11 @@ export default function Contact() {
               https://github.com/phipong
             </p>
           </div>
+          </div>
+            <div className="bg-violet-700 p-3 h-[123px] rounded-b-xl text-center pt-6">
+            <p className="text-lg font-serif">I'm interested in freelance opportunities and collaborations.
+              I’m also open to exploring new partnerships that bring creativity and shared growth.</p>
+            </div>
         </motion.div>
       </div>
     </motion.div>
