@@ -137,10 +137,7 @@ export default function Contact() {
               <span className="font-semibold text-violet-900">Phone : </span>
               081268336
             </p>
-            <p>
-              <span className="font-semibold text-violet-900">Email: </span>
-              neakpichvothanakpong@gmail.com
-            </p>
+           
             <p>
               <span className="font-semibold text-violet-900">GitHub: </span>
               https://github.com/phipong
