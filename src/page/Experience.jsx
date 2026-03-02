@@ -12,7 +12,7 @@ export default function Experience() {
   };
 
   return (
-    <motion.div initial="hidden" animate="show" className="text-white mt-16">
+    <motion.div initial="hidden" id="experience" animate="show" className="text-white">
       <motion.h1 variants={item} className="text-center text-5xl text-violet-300 font-serif mb-10">
         My Experience
       </motion.h1>

@@ -21,8 +21,9 @@ export default function About() {
     variants={container}
     initial="hidden"
     animate="show"
+    id='about'
     className='mt-5 text-white'>
-      <motion.div variants={item} className="container mx-auto w-[90%] h-[900px] lg:h-[550px] lg:w-[85%] flex flex-col gap-3 items-center mt-16 mb-4">
+      <motion.div variants={item} className="container mx-auto w-[90%] h-[900px] lg:h-[550px] lg:w-[85%] flex flex-col gap-3 items-center ">
        <div className='space-y-6 p-2'>
          <h1 className='text-5xl text-center text-violet-300 font-serif'>About me</h1>
          <p className='text-lg text-slate-400 leading-loose'>I am a motivated and beginner web developer with a strong passion for learning and growing in the field of web development. 

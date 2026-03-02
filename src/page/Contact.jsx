@@ -54,6 +54,7 @@ export default function Contact() {
     <motion.div
       initial="hidden"
       animate="show"
+      id="contact"
       className="w-full px-4 h-[940px] lg:h-[550px] mt-24"
     >
       <div className="flex flex-col lg:flex-row items-center gap-6 max-w-7xl mx-auto">

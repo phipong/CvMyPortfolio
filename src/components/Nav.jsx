@@ -1,61 +1,94 @@
-import { Link, useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function Nav() {
-  const location = useLocation();
-  const [active, setActive] = useState(location.pathname);
+  const [active, setActive] = useState("home");
   const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    setActive(location.pathname);
-    setOpen(false);
-  }, [location.pathname]);
+  const [bubbleStyle, setBubbleStyle] = useState({});
+  const navRef = useRef(null);
 
   const links = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Experience", path: "/experience" },
-    { name: "Contact", path: "/contact" },
-    { name: "Skill", path: "/skill" },
+    { name: "Home", id: "home" },
+    { name: "About", id: "about" },
+    { name: "Personal", id: "personal" },
+    { name: "Experience", id: "experience" },
+    { name: "Skills", id: "skill" },
+    { name: "Contact", id: "contact" },
   ];
 
+  const handleClick = (id) => {
+    const section = document.getElementById(id);
+    section?.scrollIntoView({ behavior: "smooth" });
+    setOpen(false);
+  };
+
+  // Move bubble on load / click / scroll
+  useEffect(() => {
+    const activeBtn = navRef.current?.querySelector(
+      `[data-id="${active}"]`
+    );
+
+    if (activeBtn) {
+      setBubbleStyle({
+        width: activeBtn.offsetWidth + "px",
+        left: activeBtn.offsetLeft + "px",
+      });
+    }
+  }, [active]);
+
+  // Scroll detection
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPos = window.scrollY + 200;
+
+      links.forEach((link) => {
+        const section = document.getElementById(link.id);
+        if (section) {
+          const top = section.offsetTop;
+          const bottom = top + section.offsetHeight;
+          if (scrollPos >= top && scrollPos < bottom) {
+            setActive(link.id);
+          }
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // run on load
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="w-full max-w-4xl mx-auto">
+    <div className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4">
       {/* Desktop */}
-      <div className="hidden md:block bg-zinc-800 p-4 rounded-full">
-        <ul className="flex justify-center gap-12 text-white text-lg">
-          {links.map((item, i) => (
-            <li key={i} className="relative group">
-              <Link
-                to={item.path}
-                onClick={() => setActive(item.path)}
+      <nav
+        ref={navRef}
+        className="hidden md:block relative bg-zinc-800 px-6 py-3 rounded-full"
+      >
+        {/* Sliding Bubble */}
+        <span
+          className="absolute top-2 bottom-2 ml-6 bg-violet-500 rounded-full transition-all duration-500 ease-in-out"
+          style={bubbleStyle}
+        />
+
+        <ul className="relative flex gap-10 text-white text-lg">
+          {links.map((item) => (
+            <li key={item.id}>
+              <button
+                data-id={item.id}
+                onClick={() => handleClick(item.id)}
                 className="relative z-10 px-4 py-2"
               >
                 {item.name}
-
-                {/* Bubble */}
-                <span
-                  className={`
-                    absolute inset-0 -z-10 rounded-full
-                    bg-violet-400
-                    transition-all duration-300 ease-out
-                    ${
-                      active === item.path
-                        ? "scale-100 opacity-100"
-                        : "scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100"
-                    }
-                  `}
-                />
-              </Link>
+              </button>
             </li>
           ))}
         </ul>
-      </div>
+      </nav>
 
       {/* Mobile */}
-      <div className="md:hidden bg-zinc-800 p-3 rounded-2xl">
+      <div className="md:hidden bg-zinc-800 p-3 rounded-2xl w-full">
         <div className="flex justify-between items-center">
-          <img className="w-[10%]" src="https://logodix.com/logo/1902534.png" alt="" />
+         <img className="w-[10%]" src="https://logodix.com/logo/1902534.png" alt="" />
 
           <button
             onClick={() => setOpen(!open)}
@@ -67,26 +100,23 @@ export default function Nav() {
 
         {open && (
           <ul className="mt-4 space-y-2">
-            {links.map((item, i) => (
-              <li key={i}>
-                <Link
-                  to={item.path}
-                  onClick={() => setActive(item.path)}
-                  className={`
-                    block px-4 py-2 rounded-xl text-white
-                    transition
-                    ${
-                      active === item.path ? "bg-violet-400" : "hover:bg-white/10"
-                    }
-                  `}
+            {links.map((item) => (
+              <li key={item.id}>
+                <button
+                  onClick={() => handleClick(item.id)}
+                  className={`block w-full text-left px-4 py-2 rounded-xl text-white transition ${
+                    active === item.id
+                      ? "bg-violet-400"
+                      : "hover:bg-white/10"
+                  }`}
                 >
                   {item.name}
-                </Link>
+                </button>
               </li>
             ))}
           </ul>
         )}
       </div>
-    </nav>
+    </div>
   );
 }

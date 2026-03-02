@@ -1,7 +1,12 @@
 import React from 'react'
 import Nav from '../components/Nav'
-import MainRoute from '../routes/MainRoute'
 import Footer from '../components/Footer'
+import Home from '../page/Home'
+import About from '../page/About'
+import Contact from '../page/Contact'
+import Experience from '../page/Experience'
+import Skill from '../page/Skill'
+import Personal from '../page/personal'
 
 
 export default function () {
@@ -10,7 +15,12 @@ export default function () {
         <div className='sticky top-4 mb-10 z-50'> 
             <Nav/>
         </div>
-        <MainRoute/>
+        <Home/>
+        <About/>
+        <Personal/>
+        <Experience/>
+        <Skill/>
+        <Contact/>
         <Footer/>
     </div>
   )
