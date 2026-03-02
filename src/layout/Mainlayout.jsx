@@ -6,10 +6,9 @@ import About from '../page/About'
 import Contact from '../page/Contact'
 import Experience from '../page/Experience'
 import Skill from '../page/Skill'
-import Personal from '../page/personal'
+import Information from '../page/Information'
 
-
-export default function () {
+export default function Mainlayout() {
   return (
     <div>
         <div className='sticky top-4 mb-10 z-50'> 
@@ -17,7 +16,7 @@ export default function () {
         </div>
         <Home/>
         <About/>
-        <Personal/>
+        <Information/>
         <Experience/>
         <Skill/>
         <Contact/>

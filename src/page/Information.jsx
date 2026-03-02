@@ -1,6 +1,7 @@
-import { motion } from "framer-motion";
+import React from 'react'
+import { motion } from 'framer-motion'
 
-export default function Personal() {
+export default function Information() {
   return (
     <section className="text-white" id="personal">
       <motion.div
@@ -71,5 +72,5 @@ export default function Personal() {
         </div>
       </motion.div>
     </section>
-  );
+  )
 }
