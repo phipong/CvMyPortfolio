@@ -27,7 +27,7 @@ export default function About() {
        <div className='space-y-6 p-2'>
          <h1 className='text-5xl text-center text-violet-300 font-serif'>About me</h1>
          <p className='text-lg text-slate-400 leading-loose'>I am a motivated and beginner web developer with a strong passion for learning and growing in the field of web development. 
-          While I am just starting my journey and do not have professional experience yet, I am dedicated to building my skills in HTML, CSS, JavaScript, and modern frameworks like React and Tailwind CSS.
+          While I am just starting my journey, I am dedicated to building my skills in HTML, CSS, JavaScript, and modern frameworks like React and Tailwind CSS.
            I enjoy solving problems, creating responsive and user-friendly web interfaces, and continuously expanding my knowledge. 
            My goal is to contribute to meaningful projects and develop practical experience while learning from real-world challenges.
            </p>

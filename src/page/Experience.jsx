@@ -14,7 +14,7 @@ export default function Experience() {
   return (
     <motion.div initial="hidden" id="experience" animate="show" className="text-white">
       <motion.h1 variants={item} className="text-center text-5xl text-violet-300 font-serif mb-10">
-        My Experience
+        Practical Experience
       </motion.h1>
 
       <div className="container mx-auto w-[90%] lg:w-[85%] relative py-10">
@@ -34,7 +34,7 @@ export default function Experience() {
             className="lg:col-start-1 lg:col-end-5 bg-zinc-800 p-4 rounded-lg w-full relative"
           >
             <h2 className="text-2xl font-semibold mb-2 flex items-center gap-1">
-              <LuMonitorCog />Frontend Developer Intern at Tech Solutions
+              <LuMonitorCog />Self-Directed Frontend Development Projects
             </h2>
             <span className="text-slate-400">June 2024 - August 2025</span>
             <ul className="list-disc list-inside mt-2 text-slate-400 leading-loose">
@@ -55,7 +55,7 @@ export default function Experience() {
             className="lg:col-start-6 lg:col-end-10 bg-zinc-800 p-4 rounded-lg w-full lg:w-[600px] relative"
           >
             <h2 className="text-2xl font-semibold mb-2 flex items-center gap-1">
-              <GrCloudComputer />Web Development Intern at Digital Innovations
+              <GrCloudComputer />Self-Directed Full-Stack Development Project
             </h2>
             <span className="text-slate-400">August 2025 - January 2026</span>
             <ul className="list-disc list-inside mt-2 text-slate-400 leading-loose">
@@ -76,11 +76,10 @@ export default function Experience() {
             className="lg:col-start-1 lg:col-end-5 bg-zinc-800 p-4 rounded-lg w-full relative"
           >
             <h2 className="text-2xl font-semibold mb-2 flex items-center gap-1">
-              <MdOndemandVideo />Video Editing Intern at Creative Media Studio
+              <MdOndemandVideo />Independent Video Editing 
             </h2>
             <span className="text-slate-400">June 2022 - August 2022</span>
             <ul className="list-disc list-inside mt-2 text-slate-400 leading-loose">
-              <li>Assisted in editing promotional videos using Adobe Premiere Pro.</li>
               <li>Assisted in editing promotional videos using Capcut.</li>
               <li>Collaborated with the marketing team to create engaging content.</li>
             </ul>
@@ -97,7 +96,7 @@ export default function Experience() {
             className="lg:col-start-6 lg:col-end-10 bg-zinc-800 p-4 lg:w-[600px] rounded-lg w-full relative"
           >
             <h2 className="text-2xl font-semibold mb-2 flex items-center gap-1">
-              <FaGithub />Git & GitHub Workshop Participant
+              <FaGithub />Version Control with Git & GitHub
             </h2>
             <span className="text-slate-400">March 2024</span>
             <ul className="list-disc list-inside mt-2 text-slate-400 leading-loose">

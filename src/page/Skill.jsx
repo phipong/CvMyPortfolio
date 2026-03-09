@@ -83,6 +83,7 @@ export default function Skill() {
         </div>
         
         <div className="Card w-[90%] mx-auto p-5 mt-5 rounded-xl text-white">
+            <h3 className="text-center text-xl font-semibold mb-2 text-violet-300">Technical Skills</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {/* Card 1 */}
             <ul className="list-disc list-inside text-left text-lg border border-violet-400 rounded-xl p-4 marker:text-violet-400">

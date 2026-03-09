@@ -51,7 +51,7 @@ export default function Information() {
                 <span className="text-violet-400">Khmer:</span> Native
               </p>
               <p>
-                <span className="text-violet-400">English:</span> Intermediate
+                <span className="text-violet-400">English:</span> Upper Intermediate
               </p>
             </div>
           </motion.div>
