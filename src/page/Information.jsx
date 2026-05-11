@@ -64,7 +64,7 @@ export default function Information() {
             viewport={{ once: true }}
           >
             <img
-              src="/img/IMG_5905 phi.jpg"
+              src="img\Gemini_Generated_Image_fxssacfxssacfxss.png"
               alt="profile"
               className="w-60 sm:w-72 lg:w-80 h-auto rounded-xl object-cover shadow-lg hover:scale-105 transition duration-500"
             />
